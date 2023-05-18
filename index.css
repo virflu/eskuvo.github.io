@@ -1,0 +1,85 @@
+body{
+    background-color: #f7f3ec;
+    margin: 10px;
+    padding: 15px;
+    font-family: "Noto", sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333333;
+}
+#text {
+    opacity: 0;
+    animation: fadeIn 8s 8s ease forwards;
+}
+p {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: 'Noto', serif;
+    letter-spacing: 1px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: black;
+    outline: none;
+    text-align: center;
+}
+p:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+}
+.right{
+    text-align: center;
+    padding-left: 100px;
+}
+.left{
+    text-align: left;
+    padding-right: 100px;
+}
+.table {
+    font-family: "Arial Rounded MT Bold", serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+#container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#moving-image {
+    position: absolute;
+    left: -600%; /* Initially positioned outside the container */
+    animation: slideIn 8s alternate-reverse, fadeOut 4s 5s ease forwards;
+    width: 90%; /* Adjust the width as desired */
+    height: auto; /* Maintain aspect ratio */
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slideIn {
+    0% {
+        left: 0%; /* Start position outside the container */
+    }
+    100% {
+        left: 100%; /* End position outside the container */
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
